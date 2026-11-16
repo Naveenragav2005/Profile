@@ -197,7 +197,7 @@ html:not(.js) .palette-btn, html:not(.js) .theme-btn { display: none; }
   color: var(--muted); font-size: 0.86rem;
   box-shadow: var(--shadow);
 }
-.dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); animation: pulse 2.4s ease-out infinite; }
+.dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); animation: pulse 2.4s ease-out infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--accent-line); } 100% { box-shadow: 0 0 0 10px transparent; } }
 
 .hero h1, .page-head h1, .post-head h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; }
@@ -619,6 +619,7 @@ html:not(.js) .filters { display: none; }
   .wrap { padding: 0 1.1rem; }
   .nums { grid-template-columns: 1fr; }
   .brand span:last-child { display: none; }
+  .status .loc { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
