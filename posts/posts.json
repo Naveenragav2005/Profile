@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "example-post",
+    "title": "Example post",
+    "date": "2026-11-16",
+    "summary": "A template that shows how a post is written. It stays hidden while draft is true.",
+    "tags": ["template"],
+    "draft": true
+  }
+]
