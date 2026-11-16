@@ -8,15 +8,17 @@
   <meta property="og:title" content="Naveen Ragav Karthikeyan">
   <meta property="og:description" content="CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a0e13">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0e13'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%235eead4' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f8f7f3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232f7566'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%23ffffff' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header">
     <div class="wrap bar">
@@ -35,11 +37,15 @@
 
   <main id="main">
     <section class="hero">
-      <div class="wrap">
-        <p class="status"><span class="dot" aria-hidden="true"></span>Backend Engineer at HAIVA · Chennai, India</p>
-        <h1>Naveen Ragav<br><span class="grad">Karthikeyan</span></h1>
-        <p class="tagline">CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.</p>
-        <div class="actions">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="status" data-reveal><span class="dot" aria-hidden="true"></span>Backend Engineer at HAIVA · Chennai, India</p>
+        <h1 data-reveal>Naveen Ragav<br><span class="grad">Karthikeyan</span></h1>
+        <p class="typed-line" data-reveal aria-hidden="true">Focused on <span class="typed" data-words="AI agent safety|Evaluation methodology|Reliable autonomous systems">AI agent safety</span><span class="caret"></span></p>
+        <p class="tagline" data-reveal>CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.</p>
+        <div class="actions" data-reveal>
           <a class="btn primary" href="projects.html">View projects</a>
           <a class="btn" href="contact.html">Get in touch</a>
         </div>
@@ -49,50 +55,82 @@
     <section class="band">
       <div class="wrap">
         <ul class="stats">
-          <li><a href="research.html"><span class="k">NeurIPS 2026 Workshop</span><span class="v">PEAQ accepted</span></a></li>
-          <li><a href="research.html"><span class="k">IEEE ICNGCS 2025</span><span class="v">Conference paper</span></a></li>
-          <li><a href="research.html"><span class="k">IJIRT</span><span class="v">Journal paper</span></a></li>
+          <li class="spot" data-reveal><span class="num" data-count="3" data-decimals="0" data-suffix="">3</span><span class="lab">Publications</span></li>
+          <li class="spot" data-reveal><span class="num" data-count="4" data-decimals="0" data-suffix="">4</span><span class="lab">Projects</span></li>
+          <li class="spot" data-reveal><span class="num" data-count="95.38" data-decimals="2" data-suffix="%">95.38%</span><span class="lab">Accuracy, depression subtype classification</span></li>
+          <li class="spot" data-reveal><span class="num" data-count="0.997" data-decimals="3" data-suffix="">0.997</span><span class="lab">ROC-AUC, best-performing model</span></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="flush">
+      <div class="marquee" aria-label="Technologies">
+        <ul><li>Python</li><li>C</li><li>Java</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>SHAP</li><li>Benchmark and eval tooling</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li>Streamlit</li><li>FastAPI</li><li>Spring Boot</li><li>Git</li><li>Docker</li><li>Redis</li><li>MongoDB</li><li>LangChain</li><li>Ollama</li><li>PostgreSQL</li><li>MySQL</li><li>OPA/Rego</li></ul><ul aria-hidden="true"><li>Python</li><li>C</li><li>Java</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>SHAP</li><li>Benchmark and eval tooling</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li>Streamlit</li><li>FastAPI</li><li>Spring Boot</li><li>Git</li><li>Docker</li><li>Redis</li><li>MongoDB</li><li>LangChain</li><li>Ollama</li><li>PostgreSQL</li><li>MySQL</li><li>OPA/Rego</li></ul>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="sec-head">
+        <div class="sec-head" data-reveal>
           <h2 class="sec-title">Featured project</h2>
-          <a class="more" href="projects.html">All projects →</a>
+          <a class="more" href="projects.html">All projects</a>
         </div>
-        <article class="card feature">
-          <p class="badge">Accepted to a NeurIPS 2026 Workshop</p>
-          <h3>Pre-Execution Agent Qualification (PEAQ)</h3>
-          <p class="card-sub">A Framework for Task-Criticality-Aware AI Agent Deployment</p>
-          <p class="meta">Independent AI safety research project · Jun 2026 – Present</p>
-          <ul class="bullets"><li>Proposed a pre-execution qualification gate placed before an agent's planner and tool selector, so an agent must be qualified before it is allowed to plan or act, not only checked after it proposes an action.</li><li>Built a two-layer safety framework combining an offline Agent Trust Score with a deterministic OPA/Rego runtime gate, evaluated on a unified benchmark schema integrating AgentHarm, InjecAgent, ToolEmu, tau-bench, and SWE-bench.</li></ul>
-        </article>
+        <article class="card feature spot" id="peaq" data-cats="agents published" data-reveal>
+            <p class="badge">Accepted to a NeurIPS 2026 Workshop</p>
+            <h3>Pre-Execution Agent Qualification (PEAQ)</h3>
+            <p class="card-sub">A Framework for Task-Criticality-Aware AI Agent Deployment</p>
+            <p class="meta">Independent AI safety research project · Jun 2026 – Present</p>
+            
+            <ul class="bullets"><li>Proposed a pre-execution qualification gate placed before an agent's planner and tool selector, so an agent must be qualified before it is allowed to plan or act, not only checked after it proposes an action.</li><li>Built a two-layer safety framework combining an offline Agent Trust Score with a deterministic OPA/Rego runtime gate, evaluated on a unified benchmark schema integrating AgentHarm, InjecAgent, ToolEmu, tau-bench, and SWE-bench.</li></ul>
+            
+          </article>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="sec-head"><h2 class="sec-title">Research interests</h2><a class="more" href="research.html">Research →</a></div>
-        <ul class="interest-grid">
-          <li><span class="num">01</span>AI agent safety</li><li><span class="num">02</span>Evaluation methodology</li><li><span class="num">03</span>Reliable autonomous systems</li>
+        <div class="sec-head" data-reveal><h2 class="sec-title">Research interests</h2><a class="more" href="research.html">Research</a></div>
+        <ul class="interest-grid"><li class="spot" data-reveal><span class="idx">01</span>AI agent safety</li><li class="spot" data-reveal><span class="idx">02</span>Evaluation methodology</li><li class="spot" data-reveal><span class="idx">03</span>Reliable autonomous systems</li></ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sec-head" data-reveal><h2 class="sec-title">Publications</h2><a class="more" href="research.html">Details</a></div>
+        <ul class="pub-strip">
+          <li data-reveal><a class="spot" href="research.html"><span class="k">NeurIPS 2026 Workshop</span><span class="v">PEAQ accepted</span></a></li>
+          <li data-reveal><a class="spot" href="research.html"><span class="k">IEEE ICNGCS 2025</span><span class="v">Conference paper</span></a></li>
+          <li data-reveal><a class="spot" href="research.html"><span class="k">IJIRT</span><span class="v">Journal paper</span></a></li>
         </ul>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="sec-head"><h2 class="sec-title">Explore</h2></div>
+        <div class="sec-head" data-reveal><h2 class="sec-title">Explore</h2></div>
         <ul class="explore">
-          <li><a href="about.html"><span class="t">About</span><span class="d">Education and technologies</span></a></li>
-          <li><a href="experience.html"><span class="t">Experience</span><span class="d">HAIVA, Mphasis Limited, NIT Trichy</span></a></li>
-          <li><a href="projects.html"><span class="t">Projects</span><span class="d">Four projects in AI safety, ML and software</span></a></li>
-          <li><a href="research.html"><span class="t">Research</span><span class="d">Interests and publications</span></a></li>
+          <li data-reveal><a class="spot" href="about.html"><span class="t">About</span><span class="d">Education and technologies</span></a></li>
+          <li data-reveal><a class="spot" href="experience.html"><span class="t">Experience</span><span class="d">HAIVA, Mphasis Limited, NIT Trichy</span></a></li>
+          <li data-reveal><a class="spot" href="projects.html"><span class="t">Projects</span><span class="d">PEAQ and three more</span></a></li>
+          <li data-reveal><a class="spot" href="research.html"><span class="t">Research</span><span class="d">Interests and publications</span></a></li>
         </ul>
       </div>
     </section>
 
+    <section class="cta" data-reveal>
+      <div class="wrap">
+        <div class="cta-box spot">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:naveen2005ragav@gmail.com">Email me</a>
+            <a class="btn" href="contact.html">All contact links</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

@@ -8,15 +8,17 @@
   <meta property="og:title" content="About · Naveen Ragav Karthikeyan">
   <meta property="og:description" content="CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a0e13">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0e13'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%235eead4' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f8f7f3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232f7566'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%23ffffff' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header">
     <div class="wrap bar">
@@ -35,16 +37,18 @@
 
   <main id="main">
     <div class="page-head">
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
       <div class="wrap">
-        <p class="eyebrow">About</p>
-        <h1>About me</h1>
-        <p class="page-intro">CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.</p>
+        <p class="eyebrow" data-reveal>About</p>
+        <h1 data-reveal>About me</h1>
+        <p class="page-intro" data-reveal>CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.</p>
       </div>
     </div>
     <section>
       <div class="wrap split">
-        <h2 class="sec-title">Education</h2>
-        <div class="card">
+        <h2 class="sec-title" data-reveal>Education</h2>
+        <div class="card spot" data-reveal>
           <div class="row-head"><h3>PSG College of Technology</h3><p class="when">Oct 2022 – May 2026</p></div>
           <p class="meta">Bachelor of Engineering in Computer Science · Coimbatore, India</p>
           <p class="label">Relevant coursework</p>
@@ -55,24 +59,45 @@
 
     <section>
       <div class="wrap split">
-        <h2 class="sec-title">Currently</h2>
-        <div class="card">
+        <h2 class="sec-title" data-reveal>Currently</h2>
+        <a class="card spot link-card" href="experience.html" data-reveal>
           <div class="row-head"><h3>Backend Engineer <span class="at">HAIVA</span></h3><p class="when">Jun 2026 – Present</p></div>
           <p class="meta">Chennai, India</p>
-          <p><a class="more" href="experience.html">Full experience →</a></p>
-        </div>
+          <p class="more">Full experience</p>
+        </a>
       </div>
     </section>
 
     <section>
       <div class="wrap split">
-        <h2 class="sec-title">Technologies</h2>
-        <dl class="skills">
-          <div><dt>Languages</dt><dd><ul class="tags"><li>Python</li><li>C</li><li>Java</li></ul></dd></div><div><dt>ML and data</dt><dd><ul class="tags"><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>SHAP</li><li>Benchmark and eval tooling</li></ul></dd></div><div><dt>Web technologies</dt><dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li>Streamlit</li></ul></dd></div><div><dt>Frameworks</dt><dd><ul class="tags"><li>FastAPI</li><li>Spring Boot</li></ul></dd></div><div><dt>Tools and databases</dt><dd><ul class="tags"><li>Git</li><li>Docker</li><li>Redis</li><li>MongoDB</li><li>LangChain</li><li>Ollama</li><li>PostgreSQL</li><li>MySQL</li><li>OPA/Rego</li></ul></dd></div>
-        </dl>
+        <div>
+          <h2 class="sec-title" data-reveal>Technologies</h2>
+          <p class="hint" data-reveal>Select a highlighted technology to see where I used it.</p>
+        </div>
+        <div>
+          <div class="used" aria-live="polite" data-reveal>
+            <span class="used-k">Used in</span>
+            <span class="used-v">Pick a technology below</span>
+          </div>
+          <dl class="skills"><div data-reveal><dt>Languages</dt><dd><ul class="tags"><li><button type="button" class="chip" data-used="Intelligent Multi-Agent Orchestration Framework">Python</button></li><li>C</li><li><button type="button" class="chip" data-used="SDE Intern at Mphasis Limited">Java</button></li></ul></dd></div><div data-reveal><dt>ML and data</dt><dd><ul class="tags"><li><button type="button" class="chip" data-used="Depression Subtype Classification">PyTorch</button></li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li><button type="button" class="chip" data-used="Depression Subtype Classification">SHAP</button></li><li><button type="button" class="chip" data-used="PEAQ">Benchmark and eval tooling</button></li></ul></dd></div><div data-reveal><dt>Web technologies</dt><dd><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React.js</li><li><button type="button" class="chip" data-used="Depression Subtype Classification">Streamlit</button></li></ul></dd></div><div data-reveal><dt>Frameworks</dt><dd><ul class="tags"><li><button type="button" class="chip" data-used="Backend Engineer at HAIVA | Financial Tracking System for Civil Construction">FastAPI</button></li><li><button type="button" class="chip" data-used="SDE Intern at Mphasis Limited">Spring Boot</button></li></ul></dd></div><div data-reveal><dt>Tools and databases</dt><dd><ul class="tags"><li>Git</li><li><button type="button" class="chip" data-used="Backend Engineer at HAIVA">Docker</button></li><li><button type="button" class="chip" data-used="Backend Engineer at HAIVA">Redis</button></li><li><button type="button" class="chip" data-used="Backend Engineer at HAIVA">MongoDB</button></li><li><button type="button" class="chip" data-used="Intelligent Multi-Agent Orchestration Framework">LangChain</button></li><li><button type="button" class="chip" data-used="Intelligent Multi-Agent Orchestration Framework">Ollama</button></li><li><button type="button" class="chip" data-used="Backend Engineer at HAIVA">PostgreSQL</button></li><li><button type="button" class="chip" data-used="Financial Tracking System for Civil Construction">MySQL</button></li><li><button type="button" class="chip" data-used="PEAQ">OPA/Rego</button></li></ul></dd></div></dl>
+        </div>
       </div>
     </section>
 
+    <section class="cta" data-reveal>
+      <div class="wrap">
+        <div class="cta-box spot">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:naveen2005ragav@gmail.com">Email me</a>
+            <a class="btn" href="contact.html">All contact links</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

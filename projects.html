@@ -8,15 +8,17 @@
   <meta property="og:title" content="Projects · Naveen Ragav Karthikeyan">
   <meta property="og:description" content="CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0a0e13">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0e13'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%235eead4' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f8f7f3">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232f7566'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%23ffffff' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header">
     <div class="wrap bar">
@@ -35,41 +37,53 @@
 
   <main id="main">
     <div class="page-head">
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
       <div class="wrap">
-        <p class="eyebrow">Projects</p>
-        <h1>Projects</h1>
+        <p class="eyebrow" data-reveal>Projects</p>
+        <h1 data-reveal>Projects</h1>
       </div>
     </div>
     <section>
       <div class="wrap">
+        <div class="filters" role="group" aria-label="Filter projects" data-reveal>
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="agents" aria-pressed="false">AI agents</button>
+          <button type="button" class="filter" data-filter="ml" aria-pressed="false">Machine learning</button>
+          <button type="button" class="filter" data-filter="published" aria-pressed="false">Published</button>
+        </div>
         <div class="cards">
-          <article class="card feature" id="peaq">
+          <article class="card feature spot" id="peaq" data-cats="agents published" data-reveal>
             <p class="badge">Accepted to a NeurIPS 2026 Workshop</p>
             <h2>Pre-Execution Agent Qualification (PEAQ)</h2>
             <p class="card-sub">A Framework for Task-Criticality-Aware AI Agent Deployment</p>
             <p class="meta">Independent AI safety research project · Jun 2026 – Present</p>
+            
             <ul class="bullets"><li>Proposed a pre-execution qualification gate placed before an agent's planner and tool selector, so an agent must be qualified before it is allowed to plan or act, not only checked after it proposes an action.</li><li>Built a two-layer safety framework combining an offline Agent Trust Score with a deterministic OPA/Rego runtime gate, evaluated on a unified benchmark schema integrating AgentHarm, InjecAgent, ToolEmu, tau-bench, and SWE-bench.</li></ul>
             
           </article>
-          <article class="card" id="orchestration">
+          <article class="card spot" id="orchestration" data-cats="agents" data-reveal>
             
             <h2>Intelligent Multi-Agent Orchestration Framework</h2>
             
             <p class="meta">Jul 2025 – Dec 2025</p>
+            
             <ul class="bullets"><li>Built a planner-centric multi-agent orchestration system enabling autonomous task execution through LLM-guided agent collaboration with human-in-the-loop oversight.</li><li>Implemented a policy engine for cross-agent verification of proposed actions against sensitivity rules, with human override for high-sensitivity actions.</li></ul>
             <ul class="tags"><li>Python</li><li>LangChain</li><li>Ollama</li><li>SQLite</li></ul>
-          </article><article class="card" id="depression">
+          </article><article class="card spot" id="depression" data-cats="ml published" data-reveal>
             <p class="badge">Published as a journal paper in IJIRT</p>
             <h2>Depression Subtype Classification Using Hybrid ML Models</h2>
             
             <p class="meta">Jan 2026 – May 2026</p>
+            <ul class="metrics"><li><span class="num" data-count="95.38" data-decimals="2" data-suffix="%">95.38%</span><span class="lab">Accuracy</span></li><li><span class="num" data-count="0.997" data-decimals="3" data-suffix="">0.997</span><span class="lab">ROC-AUC</span></li></ul>
             <ul class="bullets"><li>Built hybrid CatBoost–Neural Network and LightGBM–Neural Network models (PyTorch) to classify Bipolar I, Bipolar II, and Unipolar depression from minute-level wearable actigraphy and clinical data, reaching 95.38% accuracy and 0.997 ROC-AUC with the best-performing model.</li><li>Built SHAP-based explainability tooling and a Streamlit interface to compare model outputs and surface the clinical and behavioral features driving each prediction.</li></ul>
             
-          </article><article class="card" id="construction">
+          </article><article class="card spot" id="construction" data-cats="ml published" data-reveal>
             <p class="badge">Published as an IEEE conference paper (ICNGCS 2025)</p>
             <h2>Financial Tracking System for Civil Construction</h2>
             
             <p class="meta">Jan 2025 – Jun 2025</p>
+            <ul class="metrics"><li><span class="num" data-count="99" data-decimals="0" data-suffix="%">99%</span><span class="lab">R², final cost prediction</span></li></ul>
             <ul class="bullets"><li>Built a financial tracking platform to monitor expenses and control budgets on civil engineering projects, using React Native for the frontend, Flask/FastAPI for the backend, and MySQL for data management.</li><li>Implemented a Random Forest regressor achieving 99% R² in predicting final project costs and flagging potential budget overruns, improving financial transparency and supporting decision-making.</li></ul>
             
           </article>
@@ -77,6 +91,20 @@
       </div>
     </section>
 
+    <section class="cta" data-reveal>
+      <div class="wrap">
+        <div class="cta-box spot">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:naveen2005ragav@gmail.com">Email me</a>
+            <a class="btn" href="contact.html">All contact links</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
