@@ -7,6 +7,7 @@ Personal website. Plain HTML, CSS and JavaScript, with no build step.
 - Pages: `index.html`, `about.html`, `projects.html`, `research.html`, `writing.html`, `post.html`, `contact.html`
 - `style.css` holds the design. The colours for light and dark mode are defined once at the top.
 - `script.js` holds the interactions (page changes, theme switch, quick menu, posts).
+- `Naveen_Ragav_CV.pdf` is the CV linked from the site. Replace the file to update it.
 - `fonts/` and `vendor/` hold the bundled fonts and the Markdown library.
 
 ## Adding a blog post

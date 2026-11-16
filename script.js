@@ -459,6 +459,7 @@
     { label: 'Contact', kind: 'Page', href: 'contact.html' },
     { label: 'Switch light / dark mode', kind: 'Action', run: function () { toggleTheme(); } },
     { label: 'Copy email address', kind: 'Action', run: function () { copy(EMAIL); } },
+    { label: 'Open CV (PDF)', kind: 'Link', ext: 'Naveen_Ragav_CV.pdf' },
     { label: 'Open LinkedIn', kind: 'Link', ext: 'https://linkedin.com/in/naveen-ragav' },
     { label: 'Open GitHub', kind: 'Link', ext: 'https://github.com/Naveenragav2005' }
   ];

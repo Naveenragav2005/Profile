@@ -532,7 +532,7 @@ html:not(.js) .filters { display: none; }
 .mail-box { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding: 2rem; margin-bottom: 1rem; background: linear-gradient(150deg, var(--tint), var(--surface) 60%); }
 .mail { display: inline-block; margin-top: 0.4rem; color: var(--ink); font-family: var(--serif); font-size: clamp(1.5rem, 5.4vw, 2.8rem); line-height: 1.15; overflow-wrap: anywhere; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 2px no-repeat; transition: background-size 0.4s var(--ease); }
 .mail:hover { background-size: 100% 2px; }
-.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .contact-grid a { display: flex; flex-direction: column; gap: 0.25rem; height: 100%; padding: 1.6rem; color: var(--ink); }
 .contact-grid .k { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
 .contact-grid .v { font-weight: 600; overflow-wrap: anywhere; }
