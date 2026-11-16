@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Naveen Ragav Karthikeyan</title>
+  <meta name="description" content="CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.">
+  <meta property="og:title" content="Projects · Naveen Ragav Karthikeyan">
+  <meta property="og:description" content="CS graduate focused on AI agent safety, evaluation methodology, and reliable autonomous systems.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0e13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0e13'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%235eead4' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true">NR</span>Naveen Ragav</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span></button>
+      <nav id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Projects</p>
+        <h1>Projects</h1>
+      </div>
+    </div>
+    <section>
+      <div class="wrap">
+        <div class="cards">
+          <article class="card feature" id="peaq">
+            <p class="badge">Accepted to a NeurIPS 2026 Workshop</p>
+            <h2>Pre-Execution Agent Qualification (PEAQ)</h2>
+            <p class="card-sub">A Framework for Task-Criticality-Aware AI Agent Deployment</p>
+            <p class="meta">Independent AI safety research project · Jun 2026 – Present</p>
+            <ul class="bullets"><li>Proposed a pre-execution qualification gate placed before an agent's planner and tool selector, so an agent must be qualified before it is allowed to plan or act, not only checked after it proposes an action.</li><li>Built a two-layer safety framework combining an offline Agent Trust Score with a deterministic OPA/Rego runtime gate, evaluated on a unified benchmark schema integrating AgentHarm, InjecAgent, ToolEmu, tau-bench, and SWE-bench.</li></ul>
+            
+          </article>
+          <article class="card" id="orchestration">
+            
+            <h2>Intelligent Multi-Agent Orchestration Framework</h2>
+            
+            <p class="meta">Jul 2025 – Dec 2025</p>
+            <ul class="bullets"><li>Built a planner-centric multi-agent orchestration system enabling autonomous task execution through LLM-guided agent collaboration with human-in-the-loop oversight.</li><li>Implemented a policy engine for cross-agent verification of proposed actions against sensitivity rules, with human override for high-sensitivity actions.</li></ul>
+            <ul class="tags"><li>Python</li><li>LangChain</li><li>Ollama</li><li>SQLite</li></ul>
+          </article><article class="card" id="depression">
+            <p class="badge">Published as a journal paper in IJIRT</p>
+            <h2>Depression Subtype Classification Using Hybrid ML Models</h2>
+            
+            <p class="meta">Jan 2026 – May 2026</p>
+            <ul class="bullets"><li>Built hybrid CatBoost–Neural Network and LightGBM–Neural Network models (PyTorch) to classify Bipolar I, Bipolar II, and Unipolar depression from minute-level wearable actigraphy and clinical data, reaching 95.38% accuracy and 0.997 ROC-AUC with the best-performing model.</li><li>Built SHAP-based explainability tooling and a Streamlit interface to compare model outputs and surface the clinical and behavioral features driving each prediction.</li></ul>
+            
+          </article><article class="card" id="construction">
+            <p class="badge">Published as an IEEE conference paper (ICNGCS 2025)</p>
+            <h2>Financial Tracking System for Civil Construction</h2>
+            
+            <p class="meta">Jan 2025 – Jun 2025</p>
+            <ul class="bullets"><li>Built a financial tracking platform to monitor expenses and control budgets on civil engineering projects, using React Native for the frontend, Flask/FastAPI for the backend, and MySQL for data management.</li><li>Implemented a Random Forest regressor achieving 99% R² in predicting final project costs and flagging potential budget overruns, improving financial transparency and supporting decision-making.</li></ul>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>© 2026 Naveen Ragav Karthikeyan</p>
+      <ul>
+        <li><a href="mailto:naveen2005ragav@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/naveen-ragav">LinkedIn</a></li>
+        <li><a href="https://github.com/Naveenragav2005">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

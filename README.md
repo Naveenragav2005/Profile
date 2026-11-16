@@ -1,8 +1,9 @@
 # Profile
 
-Personal profile page. Plain HTML and CSS, no build step.
+Personal website. Plain HTML and CSS, no build step.
 
-- `index.html` holds all the content. Commented blocks show where to add links, publications, and education or experience.
+- Pages: `index.html`, `about.html`, `experience.html`, `projects.html`, `research.html`, `contact.html`
 - `style.css` holds the design. Colours are defined once at the top.
+- `script.js` handles the mobile menu.
 
 To host it on GitHub Pages: Settings → Pages → Deploy from a branch → choose the branch and `/ (root)`.
