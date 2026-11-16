@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naveen Ragav</title>
+  <meta name="description" content="Naveen Ragav works on AI safety: agent authorization, LLM epistemics and multi-agent systems. Research, projects and contact.">
+  <meta property="og:title" content="Naveen Ragav">
+  <meta property="og:description" content="AI safety research and software projects: agent authorization, LLM epistemics and multi-agent systems.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f4b5f'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top">Naveen Ragav</a>
+      <nav aria-label="Sections">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <!-- ───────── Intro ───────── -->
+    <section id="top" class="intro">
+      <h1>Naveen Ragav</h1>
+      <p class="lede">
+        I work on AI safety. I study when AI agents should be allowed to act and
+        whether language models change their answers for good reasons.
+      </p>
+      <p>
+        My recent work has two threads. <a href="#peaq">PEAQ</a> is a deterministic
+        gate that decides whether an agent may start an action before it plans or
+        calls a tool. <a href="#fliprate">FlipRate</a> measures whether a model
+        changes its answer because the user is right or only because the user pushed.
+        I also build full-stack software, mostly in Python, Java and TypeScript.
+      </p>
+      <ul class="links">
+        <li><a href="https://github.com/Naveenragav2005">GitHub</a></li>
+        <li><a href="https://github.com/Naveenragav2005/Epistemics/blob/HEAD/FlipRate_report.pdf">Latest report (PDF)</a></li>
+        <!-- Add more links here, for example:
+        <li><a href="mailto:you@example.com">Email</a></li>
+        <li><a href="https://scholar.google.com/citations?user=XXXX">Google Scholar</a></li>
+        <li><a href="https://www.linkedin.com/in/XXXX">LinkedIn</a></li>
+        <li><a href="cv.pdf">CV</a></li>
+        -->
+      </ul>
+    </section>
+
+    <!-- ───────── Research interests ───────── -->
+    <section id="interests">
+      <h2>Research interests</h2>
+      <dl class="interests">
+        <div>
+          <dt>Agent safety and authorization</dt>
+          <dd>Deciding what an agent may do before it acts, using checks that the request text cannot influence.</dd>
+        </div>
+        <div>
+          <dt>LLM epistemics</dt>
+          <dd>Sycophancy, belief updating under social pressure, and whether stated confidence tracks correctness.</dd>
+        </div>
+        <div>
+          <dt>Evaluation methodology</dt>
+          <dd>Benchmarks with controls, ablations and answer-key audits, so that a headline number means what it claims.</dd>
+        </div>
+        <div>
+          <dt>Multi-agent systems</dt>
+          <dd>Orchestrating specialized agents, with human approval for sensitive actions.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ───────── Research ───────── -->
+    <section id="research">
+      <h2>Research</h2>
+      <p class="section-note">Reports and research software. Each entry links to the code and the write-up.</p>
+
+      <article class="entry" id="fliprate">
+        <div class="entry-head">
+          <h3>FlipRate: do language models update because the user is right, or because the user pushed?</h3>
+          <span class="when">2026</span>
+        </div>
+        <p class="venue">Naveen Ragav · Research report, Apart Research AI × Epistemics Sprint</p>
+        <p>
+          Models answer MMLU-Pro questions and then face three escalating rebuttals:
+          doubt, a confident claim, and an appeal to authority. When the model was
+          right, the user pushes toward a wrong option. When it was wrong, the user
+          pushes toward the correct one. A no-pushback control and a Latin-square
+          order ablation separate the kind of pressure from the amount of it.
+        </p>
+        <ul class="findings">
+          <li>Across three open-weight models, discrimination (update rate minus capitulation rate) was 0.67 to 0.70.</li>
+          <li>An appeal to authority alone flipped 42–57% of correct answers in the first round. Plain doubt flipped 0–4%.</li>
+          <li>Three doubts in a row flipped at most 6% of correct answers, so repetition alone was not the cause.</li>
+        </ul>
+        <p class="entry-links">
+          <a href="https://github.com/Naveenragav2005/Epistemics/blob/HEAD/FlipRate_report.pdf">Report (PDF)</a>
+          <a href="https://github.com/Naveenragav2005/Epistemics">Code and data</a>
+        </p>
+      </article>
+
+      <article class="entry" id="peaq">
+        <div class="entry-head">
+          <h3>PEAQ: Pre-Execution Agent Qualification</h3>
+          <span class="when">2026</span>
+        </div>
+        <p class="venue">Naveen Ragav · Research framework and evaluation</p>
+        <p>
+          Most agent safety work intercepts at runtime, after the agent has already
+          planned. PEAQ moves the decision earlier. It classifies the request,
+          resolves a trusted context from records the request cannot alter, checks
+          typed hard constraints, and returns approve, conditional approve, human
+          review or reject. No LLM judgment is involved in the decision.
+        </p>
+        <ul class="findings">
+          <li>Evaluated on 2,191 cases from six public benchmarks (AgentHarm, InjecAgent, ToolEmu, τ-bench, SWE-bench, AgentDojo) across five agent domains.</li>
+          <li>On the held-out split, the hard constraints alone caught 98.3% of unsafe cases. The trust score added little, which the write-up reports as a limitation.</li>
+        </ul>
+        <p class="entry-links">
+          <a href="https://github.com/Naveenragav2005/PEAQ">Code</a>
+          <a href="https://github.com/Naveenragav2005/PEAQ#readme">Method and limitations</a>
+        </p>
+      </article>
+
+      <!-- To add a publication, copy this block:
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Paper title</h3>
+          <span class="when">2027</span>
+        </div>
+        <p class="venue">Author One, <strong>Naveen Ragav</strong>, Author Three · Venue or journal</p>
+        <p>One or two sentences on the result.</p>
+        <p class="entry-links">
+          <a href="#">Paper</a>
+          <a href="#">Code</a>
+        </p>
+      </article>
+      -->
+    </section>
+
+    <!-- ───────── Projects ───────── -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="projects">
+        <li>
+          <div class="project-head">
+            <h3><a href="https://github.com/Naveenragav2005/LeadFlow">LeadFlow</a></h3>
+            <span class="stack">Next.js · FastAPI · SQLAlchemy</span>
+          </div>
+          <p>A single-screen lead manager for sales reps. It tracks leads, logs each discussion, and pins today's and overdue follow-ups at the top.</p>
+        </li>
+        <li>
+          <div class="project-head">
+            <h3><a href="https://github.com/Naveenragav2005/InstaBuy">InstaBuy</a></h3>
+            <span class="stack">Java · Spring Boot · MongoDB</span>
+          </div>
+          <p>An e-commerce backend split into authentication, inventory, order and payment microservices, with JWT-based security.</p>
+        </li>
+        <li>
+          <div class="project-head">
+            <h3><a href="https://github.com/Naveenragav2005/personal_agent">Personal Life Orchestrator</a></h3>
+            <span class="stack">Python · Multi-agent</span>
+          </div>
+          <p>A prototype in which a calendar drives specialized agents for home, finance and health tasks. Low-sensitivity tasks run automatically and sensitive ones wait for human approval.</p>
+        </li>
+        <li>
+          <div class="project-head">
+            <h3><a href="https://github.com/Naveenragav2005/Detection-of-ASD">Detection of ASD</a></h3>
+            <span class="stack">Python · Computer vision</span>
+          </div>
+          <p>A pipeline for face detection, facial landmark extraction and statistical analysis on image datasets for autism spectrum disorder research.</p>
+        </li>
+        <li>
+          <div class="project-head">
+            <h3><a href="https://github.com/Naveenragav2005/bunkerapp">Bunker</a></h3>
+            <span class="stack">TypeScript</span>
+          </div>
+          <p>An app that shows the real cost of petrol and diesel once government taxes are removed from the pump price.</p>
+        </li>
+      </ul>
+      <p class="more"><a href="https://github.com/Naveenragav2005?tab=repositories">All repositories on GitHub</a></p>
+    </section>
+
+    <!-- ───────── Education and experience ─────────
+         Remove the comment markers around this section once it is filled in.
+    <section id="background">
+      <h2>Education and experience</h2>
+      <ul class="timeline">
+        <li>
+          <span class="when">2023 – 2027</span>
+          <div>
+            <h3>Degree, Department</h3>
+            <p>University name</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2026</span>
+          <div>
+            <h3>Role</h3>
+            <p>Organization. One line on what you did.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    -->
+
+    <!-- ───────── Contact ───────── -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        I am glad to talk about AI safety research, evaluations and collaboration.
+        The quickest way to reach me is through
+        <a href="https://github.com/Naveenragav2005">GitHub</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>© 2026 Naveen Ragav</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>
